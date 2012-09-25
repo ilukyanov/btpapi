@@ -16,13 +16,17 @@ class JsonRpc_Future {
 		$this->failed = false;
 	}
 }
+
 class JsonRpc_Connection {
 	protected $socket = null;
 	protected $server = null;
 	protected $failed = false;
 	protected $id = 0;
 	protected $onRecv = array();
-	protected $onNotify = null;
+    /**
+     * @var \Closure
+     */
+    protected $onNotify = null;
 	public function __construct($srv) {
 		$this->server = $srv;
 	}
