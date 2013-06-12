@@ -1,3 +1,3 @@
 API for BTP profiler https://github.com/mambaru/btp-daemon
 
-Make it for http://cafeteria.ru/
+Source code converted for use with composer (orbisnull/btpapi).
