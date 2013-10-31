@@ -4,9 +4,9 @@ namespace BtpApi;
 
 class Counter
 {
-    private $req;
-    private $data = array();
-    private $ts;
+    protected $req;
+    protected $data = array();
+    protected $ts;
 
     /**
      * @param Request $req

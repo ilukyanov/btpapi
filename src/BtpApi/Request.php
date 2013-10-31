@@ -106,4 +106,12 @@ class Request
         }
     }
 
+    public function appendCustomValue($item)
+    {
+        if (!$this->conn || $this->disabled) return;
+
+        $this->items[$item['service']][$item['srv']][$item['op']][] = intval($item['value']);
+
+        $this->send(false);
+    }
 }
